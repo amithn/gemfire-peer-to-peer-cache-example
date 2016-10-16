@@ -6,7 +6,7 @@ This repository contains a demo of how to use Gemfire as a peer-to-peer distribu
 
 How does it work?
 --
-The app uses Spring Data Gemfire to interact with the Gemfire caches. The app fakes the backing datasource by creating an in-memory map on startup.
+The app uses Spring Data Gemfire to interact with the Gemfire caches. The app fakes the backing datasource by creating an in-memory map on startup. The Gemfire cache's use a multicast address to discover each other. Please note that this is not a recommended deployment - It is recommended to use a locator http://gemfire.docs.pivotal.io/docs-gemfire/configuring/running/running_the_locator.html 
 
 What does it demo?
 --
