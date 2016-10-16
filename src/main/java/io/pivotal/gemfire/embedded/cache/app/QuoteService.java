@@ -2,10 +2,13 @@ package io.pivotal.gemfire.embedded.cache.app;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 import org.kohsuke.randname.RandomNameGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.scheduling.annotation.Scheduled;
 
 import javax.annotation.PostConstruct;
 
@@ -29,12 +32,17 @@ public class QuoteService {
 	}
 
 	/* If this function is called we have a cache miss */
-	@Cacheable("Quotes")
-	public Quote requestQuote(Long id) {
+	@Cacheable(value = "Quotes")
+	public Quote requestQuote(Long id) throws InterruptedException {
 		weHaveACacheMiss();
 		System.out.println("Calling read-through cache for id = " + id);
 		String randomName =  fakeBackendDataStore.get(id);
 		return new Quote(id, randomName);
+	}
+
+	@CachePut(value = "Quotes", key = "#quote.id")
+	public Quote updateQuote(Quote quote) {
+		return quote;
 	}
 
 	public void weHaveACacheMiss() {
