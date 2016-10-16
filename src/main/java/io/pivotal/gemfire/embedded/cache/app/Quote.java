@@ -58,7 +58,7 @@ public class Quote implements Serializable {
 
 	@Override
 	public String toString() {
-		return getRandomName();
+		return "id = " + id + ", name = " + getRandomName();
 	}
 
 }

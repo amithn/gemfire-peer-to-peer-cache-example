@@ -44,8 +44,8 @@ public class QuoteAppConfig {
     }
 
     @Bean
-    PartitionedRegionFactoryBean<Integer, Integer> quotesRegion(GemFireCache cache) {
-        PartitionedRegionFactoryBean<Integer, Integer> quotesRegion = new PartitionedRegionFactoryBean<>();
+    PartitionedRegionFactoryBean<Long, String> quotesRegion(GemFireCache cache) {
+        PartitionedRegionFactoryBean<Long, String> quotesRegion = new PartitionedRegionFactoryBean<>();
         quotesRegion.setCache(cache);
         quotesRegion.setClose(false);
         quotesRegion.setName("Quotes");
