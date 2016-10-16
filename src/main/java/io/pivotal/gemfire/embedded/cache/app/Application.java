@@ -29,12 +29,4 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-//    @Scheduled(fixedDelay = 30000, initialDelay = 10000)
-//    public void scheduledUpdate() {
-//        Long number = Integer.toUnsignedLong(new Random().nextInt(10));
-//        String next = randomNameGenerator.next();
-//        System.out.println("Number which was just updated is " + number + " -> " + next);
-//        quoteService.updateQuote(new Quote(number, next));
-//    }
-
 }
