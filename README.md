@@ -12,9 +12,13 @@ The app uses Spring Data Gemfire to interact with the Gemfire caches. The app fa
 
 What does it demo?
 --
-One you run both the apps, when you lookup a key from the dropdown the API makes a call to the cache via Spring Data Gemfire. If the value (for the key) is in the cache, it is returned from the cache. If not in the cache, it will go ahead retrieve it (get) from the cache and puts (put) it in the cache.
+Once you have started both the app instances, hit these URL's from the browser:
+http://localhost:8080/hit_or_miss.html
+http://localhost:9090/hit_or_miss.html
 
-Next time, the same key is looked up any app instance it does not hit the backing data source and is fetched from the distributed cache.
+And when you lookup a key from the dropdown the API makes a call to the cache via Spring Data Gemfire. If the value (for the key) is in the cache, it is returned from the cache. If not in the cache, it will go ahead and retrieve it from the backend datasource and put's (put) it in the cache.
+
+Next time, the same key is looked up via any app instance it does not hit the backing data source and is fetched from the distributed cache.
 
 How to run the demo?
 --
