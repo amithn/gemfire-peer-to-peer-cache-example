@@ -1,4 +1,4 @@
-Gemfire peer to peer distributed cache example
+Gemfire peer to peer distributed cache example - There is a screen recording of the demo at the end of this page, if you want to get a quick understanding of this project.
 
 What is this about?
 --
@@ -12,9 +12,9 @@ The app uses Spring Data Gemfire to interact with the Gemfire caches. The app fa
 
 What does it demo?
 --
-Once you have started both the app instances, hit these URL's from the browser:    
-[http://localhost:8080/hit_or_miss.html](http://localhost:8080/hit_or_miss.html "Title")    
-[http://localhost:9090/hit_or_miss.html](http://localhost:9090/hit_or_miss.html "Title")    
+Once you have started both the app instances, click on these links:    
+[app-1  http://localhost:8080/hit_or_miss.html](http://localhost:8080/hit_or_miss.html "Title")    
+[app-2  http://localhost:9090/hit_or_miss.html](http://localhost:9090/hit_or_miss.html "Title")    
 
 
 And when you lookup a key from the dropdown the API makes a call to the cache via Spring Data Gemfire. If the value (for the key) is in the cache, it is returned from the cache. If not in the cache, it will go ahead and retrieve it from the backend datasource and put's (put) it in the cache.
