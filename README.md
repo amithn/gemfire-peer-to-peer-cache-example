@@ -1,4 +1,11 @@
-Gemfire peer to peer distributed cache example - There is a screen recording of the demo at the end of this page, if you want to get a quick understanding of this project.
+Gemfire peer to peer distributed cache example - There is a screen recording of the demo below, if you want to get a quick understanding of this project.
+
+--
+Screen recording of the demo here:
+--
+<a href="https://www.youtube.com/watch?v=qFBNMcMa07M
+" target="_blank"><img src="https://i.ytimg.com/vi/qFBNMcMa07M/1.jpg?time=1476625530052" 
+alt="Video here" width="240" height="180" border="10" /></a>
 
 What is this about?
 --
@@ -38,11 +45,6 @@ Start the second app instance on port 9090
 --
 Start looking up the keys from the dropdown from each of the app instances see the cache hits and misses in action.
 
---
-Screen recording of the demo here:
---
-<a href="https://www.youtube.com/watch?v=qFBNMcMa07M
-" target="_blank"><img src="https://i.ytimg.com/vi/qFBNMcMa07M/1.jpg?time=1476625530052" 
-alt="Video here" width="240" height="180" border="10" /></a>
+
 
 
